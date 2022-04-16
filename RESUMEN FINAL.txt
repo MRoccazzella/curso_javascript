@@ -1,0 +1,461 @@
+				     ICBC
+------------------------------------------------------------------------
+
+		
+-------------------------------INFO GRAL--------------------------
+
+
+Userid: RM212340
+Legajo: 2212340
+Centro de Costos: 0022
+Dirección de mail: matias.roccazzella@icbc.com.ar
+Pass: Icbc2022
+dominio: ardp
+
+- Codigo de Registro: 29525-11075 SE ingresa en Gestion de Accesos/IDM.
+
+- Correo de contactos: cae@gylgroup.com.ar
+
+- No poder operar en TU (critico)
+
+- Siempre que envio un correo desde SOphelp va con copia a pamela alan y mi     mail laboral
+
+- si subo una captura, que sea de toda la pantalla completa.
+
+- La direccion Mac (solo en wyse y telefono)
+
+- La direccion de inventario (detras del equipo) 
+
+- Si hay algun archivo que lo perdi y necesito recuperarlo, se lo puedo   enviar al grupo de BKP
+
+- A usuarios VIP y EXCO, darle prioridad y no cortar hasta resolver el
+  inconveniente.
+
+		--------REALIZAR LLAMADOS----------
+
+-Si son llamadas externas(osea no internas)tengo que marcar con un "0"
+ delante.
+
+-Si son del interior va "00" (fuera de CABA)
+
+		------------GRUPOS WPP-------------
+
++ Capacitacion MdAT: Para todas las consultas que pueda llegar a tener.
+
++ Incidentes Masivos Diario: Para los problemas que tenemos que reportar y   que afectan a muchxs.
+
++ Avisos importantes: SOlo info que pasan Alan y Pame.
+
++ MDAT: Grupo general
+
+		------------APPS DIA A DIA-------------
+
+-Jabber (es necesario conectarse al jabber antes de ingrear al pad)
+-SERVICE DESK
+-Chage auditor: Te da la pauta de Donde se bloquea el usuario
+-pad (En aplicacion saco el basico y dejo MdA, user siempre miniusc y en  place el interno)
+-IDM (Gestion de accesos)
+		-----------OUTLOOK------------------
+
+- Para realizar citas con Teams desde outlook, ir a archivo -> opciones -> Complementos
+  ->Complementos COM -> Ir -> Selecciono todos y acepto 
+  Luego salgo de outlook y de teams y posterior abro TEAMS PRIMERO Y DESP OUTLOOK
+
+---------------------------------IDM-----------------------------------
+
+-Aqui puedo chequear estados de solicitudes, informacion de usuarios, 
+ gestionar permisos, cambios de funcion, desbloqueo de cuentas
+
+-Cuenta TU = Racf y Cuenta VISA (se desbloquea dentro de autogestion)
+
+- Si cuenta esta suspendida darle en reanudar (SIEMPRE LUEGO A ENVIAR)
+
+- Para cancelar la licencia es dentro de Personal a cargo/Cancelacion de     licencias (SOLO LO HACEN SUPERVISORES)
+
+- Cambio de funcion lo debe aprobar el supervisor
+
+- Si cambias de sucursal se dan de baja los permisos que tenias en la   suscursal previa
+
+			------------Token--------------
+
+- Lo gestionan los supervisores
+- Se gestiona dentro de Conexion remota
+- Hay que estar dentro de la app en todo momento y solo debe darle al checkbox una vez que paso el codigo de activacion.
+- Si la persona esta en sucursal a travez de un wyse lo puedo hacer yo
+  tomando el equipo
+- Chequear todo en entrust identity
+
+Para la app al activar el token:
+nombre: ICBC
+serial: 
+Codigo de activacion:
+
+			-------- PRincipal -------
+
+- Aca pueden ver la tarea si esta en curso o finalizada. 
+
+	- en principal/ver tareas
+
+----------------------------SERVICE DESK---------------------------
+
+- Aqui se realizan los tickets de las llamadas
+
+- Formato de ticket:" usuario - sucursal - titulo de problema "
+
+- 2 tipos de tk:
+	- incidentes -> Area va MA adelante
+	- solicitudes -> Area va Accesos delante 
+	- excepto desbloqueo de AD que ahi va MA primero y en Grupo dejo solo 
+	  <HELPDESK> y en elemento de configuracion va <AD NT> y en 
+	  asignatario va mi usuario.
+
+- si es tk a accesos, SIEMPRE que sea solicitud.
+
+- Para devolver ticket en actividades/actualizar estado
+
+- Siempre que se devuelva a ACCESOS SE QUITA EL ASIGNATARIO dandole en EDITAR
+
+- En usuario final afectado va la persona que tiene el problema
+
+- En solicitante va quien lo pide.
+
+- Grupo de segundo nivel es: HELPDESK-DESKTOP-ICBC
+
+- En servicio afectado va la sucucrsal de la cual me estan llamndo y si es 
+  area Central va "puesto de area central" (SOLO INCIDENTES)
+
+- En crear actividad para incidente se registra comentarios.
+
+- En codigo de resolucion va "primer contacto"
+
+- Si envio un tk a NOC es necesario MAC de wyse y de telefono para verificar 
+  la conectividad.
+
+- Virt (grupo donde se envia por problemas de escritorios virtuales)
+
+		      --------PENDIENTES--------
+
+- Se llama 3 veces, si no hay rta se envia mail desde SOP
+- Si sigue sin responder luego de enviarle mail se finaliza TK sin rta
+
+		---------ASOCIAR HIJO - PADRE---------------
+
+- Ir a relaciones y ahi adjuntar el tk padre
+
+
+
+------------------------------DIRECTOR-----------------------------
+
+-El Director sirve para:
+	+ Acceder al escritorio Virtual de un usuario
+	+ Desenganchar aplicaciones y escritorios
+
+- Solo puedo acceder desde el director a equipos Wyse y Laptop personales
+  conectadas al Citrix, si no es uno de estos casos derivo a LVL 2.
+
+----------------------------------CITRIX----------------------------
+
+- Si usuario desea hacer la instalacion de 0 se le envia instructivo 
+
+- App que se usa para conectarse a los escritorios remotos del banco.
+
+- Si el usuario cambia la pass dentro de citrix, log off y se actualiza
+
+- Si sale error al abrir app: "Citrix no pudo iniciar la aplicacion 
+  solicitada", validar que no tiene ninguna app ni sesion enganchada
+
+- Se puede acceder de 2 formas distintas:
+	- Citrix APP (Circulo azul con blanco adentro)
+	- Netscaller (Candadito)
+		+ Para acceder al Netscaller se ingresa a:
+		  https://vpnho.icbc.com.ar
+
+		--------------NETSCALLER---------------
+
+- Si user esta conectado en Laptopp Full y se le vence la pass de netscaller
+  debe de cambiarla(ctrl + alt + supr), bloquear y desbloquear la compu con 
+  la nueva clave.
+
+- Al estar conectados a netscaller no se le puede tomar el equipo.
+
+- https://vpnho.icbc.com.ar:8445/ para cuando es necesario acceder sin pasar
+  el AV
+
+- Errores de netscaller:
+	+ Este dispositivo no cumple con los requisitos para iniciar sesion 
+   	  (Culpa del AV)
+	+ Error en la puerta de enlace  predeterminada (culpa del AV)
+	+ Solo cuando intento abrir el AV y no me deja inicio como admin y 
+	  se pasa la clave Master90.
+
+
+---------------------------------PAPERLESS--------------------------
+
+- Se abre desde Internet Explorer
+
+- Chequear por donde estan conectados (Wifi, datos)
+
+- Si tengo un problema, pedir(extra a lo normal):
+	+ DNI
+	+ Cliente (si es existente o nuevo)
+	+ Tipo de Error
+	+ Nro de Tramite
+
+- Suele ser area comercial
+
+- CALIBRACION DE PAPERLESS:
+	+ Panel de control, Iconos largos, Wacom tablet properties -> Tildar
+	  opcion "use windows inc" -> Seleccionar Monitor 2 -> Luego darle a
+	  calibracion -> Debe de poner las 4 cruces en los vertices (desde la
+	  tablet). 
+	+ Dentro de explorer, mannage add-on y chequear que este
+ 	  habilitado complemento java, si no, habilitarlo.
+	+ Si no me aparece para calibrar y me aparece una falla en ingles: 
+	  Pedirle que apague el wyse desconeconecte el cable y lo vuelva a
+	  conectar
+
+-------------------------------------TU-------------------------------
+
+- Es indispensable por el dia a dia.
+
+- Tiene 5 terminales
+
+- Suele ser area Operativa
+
+- Reconexion de ticketera TU:
+	+ Cierre todas las apps > Apague el wyse y despues la ticketera, 
+	  Reconecte el cable USB por unos minutos, y enciende en el orden
+	  ticketera-wyse. Despues a la hora de imprimir con la ticketera 
+	  corrobora que este configurada en TU desde seleccion de impresoras
+	  > te tiene que aparecer como LPT1 en el primer campo 
+	  (EN ESE ORDEN SI O SI)
+
+			------------CONFIG DE IMPRESORA-------------
+
+- Dentro de TU -> Solapa de utilidades -> config de impresora
+		- 2 opciones por impresora o por ticketera:
+			- Ticketera: Aparece LTP 
+			- Impresora: Selecciono la impresora por defecto.
+
+-------------------------XEN MOBILE O SECURE HUB----------------------
+
+- Podemos definirlo como el Playstore o Appstore donde se bajan apps como:
+	+ Paperless Mobile:
+		+ Permite realiar firmas digitales en formularios de 
+		  Paperless a travez de reconocimiento facial con el 
+	 	  cliente en linea
+	+ Secure Mail:
+		+ Se utiliza para acceder al mail corporativo
+	+ QuickEdit:
+		+ Permite abrir adjuntos en formato Word, Excel, PDF
+		  y PowerPoint
+	+ Secure Web: 
+		+ Permite navegar por paginas internas del banco y apertura
+		  de links recibidos por correo (Secure Web)
+
+- Si no recuerda el pin se le indica al usuario que lo ingrese mal 10 veces
+  que le solictara uno nuevo.
+
+- Compatible en Android con version 8 o superior.
+- A partir de iphone 7 Plus funciona.
+
+- Para visualizar el pin es dentro de la consola (Endpoint Management)
+
+--------------------------ENTRUST IDG TOKEN--------------------------
+
+- Es para ver info de la app del token
+
+- unica persona que puede desbloquear el token en tu supervisor
+
+- maximo pueden haber 6 intentos
+
+- se desbloquea desde el IDM
+
+- Si esta bloqueado (porque se olvida pin de 4 digitos) va soli a accesos.
+
+- Existe tambien la version Desktop
+
+-------------------------------ONDEMAND------------------------------------
+
+- Aqui se ven movimientos de informacion
+
+- Se accede con clave de windows 
+
+- Siempre que el user quiera abrir on demand consultar si tiene abierta
+  alguna app de office, si es asi,  que cierre ambas, y primero abra 
+  ondemand y luego las de office
+
+- Si no ven los listados que corresponen a la sucursal, captura y soli a
+  accesos y en area de incidente va "acceso problema"
+
+--------------------------------TERADATA----------------------------------
+
+- Blanqueo a travez de formulario con aprobacion del supervisor.
+
+---------------------------------JAVA------------------------------------
+
+- Restablecer, panel de control- java32 bit - settings- delete - tildo 3 
+  opciones y doy a "ok" - "ok" - "Apply"
+- Restablecer NAVEGADOR: panel de control - opciones de internet - dentro de general ir a delete
+  Destildar la opcion delete browser - darle delete - luego destildar PRIMERA Y CUARTA OPCION -
+  click en apply - then ok.
+
+---------------------------------SOS-------------------------------------
+
+- Abrir desde edge
+
+QUE SE GESTIONA DESDE SOS:
+	- Pedir acceso de xenmobile
+	- Pedir equipo (monitor, teclado, etc)
+	- Accesos y permisos
+
+- Si me meto en el equipo del user y Hago la solicitud por el, siempre
+  agregar n° de interno
+
+---------------------------VAULT ENTERPRISE------------------------------
+
+- desde intranet en mis apps, para chequear mail antiguos
+
+-------------------------------MAPEOS------------------------------------
+
+- Si es necesario realizar mapeo de impresora, solo puede segundo nivel
+- Debo de darle IP del equipo o MAC en wyse, Hostname y n°inventario
+
+--------------------------------MI ICBC----------------------------------
+
+- Abre plataforma de Oracle
+- Inicia sesion con "Conexion unica de empresa"
+- va la direc de mail con dominio ICBC
+- Es necesario el permiso HCM (en caso de no tenerlo tk a accesos)
+
+----------------------------LICENCIAS OFFICE-----------------------------
+
+- Si algun usuario no tiene licencia enviar correo a michael.goitia o 
+  a martin.margulis (Enviar el nombre y apellido del user)
+- Por error de licencia de outlook debo de volver a iniciar tocando
+  donde me figura que "falta la licencia"
+
+-------------------------EMULACIONES O REFLECTION------------------------
+
+- Se pueden visualizar los accesos de:
+	+ VISA
+	+ MASTERCARD
+	+ BBPROD
+	+ DCPE
+
+- Link: https://emulacionescontingencia/mss (abrir siempre x internet exp
+	[GRIS NO])
+
+- Se ingresa con credenciales de Windows
+
+- Por consultas operativas dentro de Emulaciones, debe de saberlo el user
+
+------------------------------CHANGE AUDITOR-----------------------------
+
+- Basicamente aqui puedo ver donde esta bloqueado el usuario
+- Para iniciar, todo es por default
+- Search - All Events - Busco nuevamente All Events
+- Solapa users, busco el user que necesito
+
+- En origin si visualizo:
+	+ LTP/L00/123.etc es Notebook,
+	+ Si visualizo D"algo mas" es Tiny
+	+ Si aparece ARDPS bloqueado en servidor
+	+ Si aparece J"algo mas" es CELU
+  
+-------------------------------FPA O FPR---------------------------------
+
+- Aplicacion CRITICA 
+- Existen ambiente Prod y QA (Testing)
+- Users suelen enganchar o bloquear, para ambos casos solicitar desenganche
+  o desbloqueo aclarando si es en el ambiente PROD o en QA
+
+--------------------------SISTEMA DE MUTUALES----------------------------
+
+- Aplicacion CRITICA
+- Error referente a que esta conectado en otra terminal, desengancha LVL 2
+
+-----------------------------VAULT ENTERPRISE----------------------------
+
+- App para visualizar correos antiguos
+
+- Errores comunes:
+	+ No puede realizar busquedas de mails antiguos, falla el motor
+	  de busqueda
+	+ No puede visualizar mails antiguos (anteriores a 2 años o mas)
+	+ No puede restaurar mails antiguos a su buzon de "Elementos
+	  Restaurados".
+-------------------------------PERMISOS---------------------------------
+
+		------------SI o SI TODOS DEBEN TENERLOS-------------
+Global Group memberships     
+
+*Prod_owa_users       (Permiso de OWA para cualquier usuario pueda acceder por ONE)
+
+*Domain Users
+
+*SEV_PG0001     
+
+*PROD_MSOffice_USER (Permiso para el acceso de office publicado)
+
+*acl_xd_podc2     (Permiso de escritorio virtual base para todo user)
+
+*acl_fr_d         (Permiso de folder - redirection)
+
+*GNavegacionSegura (Permiso de navegación segura que permite no solo navegar en 
+ internet, sino que es requerido para poder usar teams (recuerden que Teams/office
+ 365 es por licencia manual y le deben enviar mail a Michael.goitia@icbc.com.ar) y
+ mi icbc (aplicación para ver recibos de sueldos y carga de vacaciones en icbc))
+
+*GVPNHORA1 (Permiso de uso horario para loguearse VPN a la red del banco)
+ Sobre este existen otros dos dependiendo de los días y horarios que el horario lo
+ necesite ( se pueden autogestionar como complementarios)
+
+•	GVPNHORA1 - Operación estándar (7:00 a 22:00, de Lunes a Viernes) --- RC.AD.GVPNHORA1
+•	GVPNHORA2 - Operación extendida (6:00 a 23:00, los 7 días a la semana) --- RC.AD.GVPNHORA2
+•	GVPNHORA3 - Operación de soporte de producción (7 x 24, los 7 días a la semana) --- RC.AD.GVPNHORA3
+
+
+Para aquellos usuarios que quieran conectarse por netscaler (candadito) con laptop 
+full y usen localmente las aplicaciones, si o si deben tener este permiso (gVPNUsers) 
+impactado adicionalmente. 
+
+---------------------------RECUPERO DE ARCHIVOS--------------------------
+
+- Informar siempre en caso de recuperar archivo la fecha, horario, nombre
+  del archivo y de la carpeta
+
+--------------------------ASIGNACION DE TERMINAL TU----------------------
+
+-Si es en una sucursal, lo hace el contador o supervisor
+
+-Si es en sede Central, va solicitud a accesos
+
+------------------CONFIG CARPETA PUBLICA EN OUTLOOK O OWA----------------
+
+Grupo backoffice de
+
+--------------------------------BPM-------------------------------------
+
+Grupo: BPM: TI-INFR_PR_E_BO
+
+--------------------------------CISCO------------------------------------
+
+-Blanqueo de pin lo realiza el usuario con instructivo q esta en wpp avisos imp 
+-Si es un alta de un usuario nuevo  formulario con aprobacion del supervisor
+
+--------------------------------JABBER-----------------------------------
+
+Si no se corrigue en linea va incidente a TI_INFR_COM
+
+---------------------------CENTRO DE COPIADOS---------------------------
+
+Cuando el user llame porque la tarjeta para poder imprimir no les anda pasarles
+ese interno
+
+Internos:
+		- 2532
+		- 2143
+---------------------------------DUDAS-----------------------------------
+
+

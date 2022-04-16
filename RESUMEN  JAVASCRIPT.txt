@@ -1,0 +1,209 @@
+----------------------------RESUMEN JAVASCRIPT------------------------------------
+
+
+------------------------------------CLASE 1---------------------------------------
+
+- Se pueden ver tutoriales en FAZT o FreeCodeCamp
+
+            ------------------ INTRODUCCION ------------------
+
+¿Que es una app web? 
+    - Mientras que los sitios web brindan informacion exacta, las apps 
+     web permiten a los users realizar multiples tareas
+    - Son Plataformas dinamicas e interactivas donde hay logica detras
+
+- Una Api (Aplication Programing Interface) es el intermediario para levantar
+  la informaicon que se encuentra en la base de datos.
+
+
+ELEMENTOS BASICOS:
+    - datos:
+        + numericos
+        + cadenas
+
+    - VARIABLES
+    - OBJETOS
+    - ARRAYS
+    - FUNCIONES
+
+------ ¿QUE ES UN ALGORITMO? -------
+
+- Conjunto de procedimientos o funciones ordenados que se necesitan para realizar
+  cierta operacion o accion
+
+
+
+LIBRERIAS:
+    - momentJS
+    - Sweet Alert
+    - Axios
+
+---------------------------------CLASE 2------------------------------------
+
+--------------SINTAXIS Y VARIABLES-----------------
+
+Tipos de VARIABLES:
+  -Strings: Cadena d caracteres entre "" o ´´
+  -numericos: Puede ser entero o decimal
+  -buleans
+  -Empty: 
+    + Null(cuando no tiene ningun valor)
+    +Undefined(cuando no se puede definir el tipo)
+
+Tipos de Operadores:
+  - Unarios(suma resta etc)
+  - Binarios
+  - Ternarios
+
+  ----------------------SINTAXIS----------------------
+
+  -Podemos escribir dentro de las etiquetas <script> podemos escribir
+   nuestro codigo de JAVASCRIPT
+  
+  -Crear el archivo script.js donde volcare todo mi codigo
+
+  Comentario de 1 linea: //esto es un Comentario
+  Comentario de mas de una linea: /* este comentario debo de cerrarlo
+
+                                 donde quiera*/
+
+--------------Variables--------------------
+
+declarar variables:
+  let nombre = "Matias" (la variable puede cambiar)
+  var nombre = "Matias" (NO USAR)
+  const Curso = "Javascript" (con const la variable no cambia)
+                             (VAN EN MAYUSCULA LOS NOMBRES DE VARIABLES CONST)
+                            
+
+-Para ver que tipo de dato me arroja la variable puedo utilizar el metodo
+ typeof(<variable>)
+
+- Sentencia PROMPT muestra un recuadro para q el user escriba:
+    - let nombre = prompt("ingrese su nombre")(SIEMPRE ES UN STRING)
+
+-Sentencia console.log(<mensaje que quiera mostrar>)
+    -console.log("Esto es un mensaje")
+    #Esto es un mensaje
+-sentencia alert("<mensaje>")
+    -sale un pop up con el mensaje que ingreses
+-sentencia parseInt(<variable>) para convertir una variable a tipo INT
+-Sentencia NoN(<variable>) para verificar si <variable> es un num o no
+    -Devuelve True o False
+
+- La función confirm muestra una ventana modal con una pregunta y dos botones: OK y CANCELAR.
+- El resultado es true si se pulsa OK y false en caso contrario.
+
+
+-------------------------------CLASE 2 ---------------------------------
+
+                  -----------CONTROL DE FLUJOS---------------
+
+Condicional if :
+
+"""
+let unNumero = 5;
+if (unNumero == 5){
+  console.log("los numeros son iguales");
+}
+"""
+
+AGREGO else:
+
+"""
+else{
+  console.log("El numero no es 5");
+}
+"""
+
+Condicional else if:
+
+"""
+let precio = 100.5
+if(precio) < 20{
+  console.log("El precio es menor a 20")
+}else if(precio) < 30{
+  console.log("El precio es menor a 30 pero mayor a 20")
+}else{
+    console.log("El precio es mayor o igual que 30")
+}
+"""
+
+OPERADORES LOGICOS:
+OPERADORES---------DESCRIPCION---------------EJEMPLO
+
+  - ==              es igual                 a=b
+  - ===        es estrictamente igual        a === b
+                (significa que Compara
+                valor y tipo de dato)
+  &&                  AND                     if ((a=="ana" && b=="perez)){
+                                                  console.log("Ella es ana perez")
+                                              }else ...
+  ||                  OR                      Igual que el AND pero con restricciones de OR
+
+----------------------------- CLASE 3-----------------------------------------
+
+
+-------------------------CICLOS------------------------
+
+ESTRUCTURA FOR:
+
+for(<desde>, <hasta>;<actualizacion>(sirve de contador)){
+  <codigo>
+}
+
+"""
+            // mostrar números del 1 al 100 en consola
+
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+}
+"""
+La variable i se destruye al finalizar el ciclo
+
+BREAK Y CONTINUE
+
+BREAK: corta el ciclo for por completo.
+
+CONTINUE: Corta solo la iteracion que esta por debajo de el.
+
+ESTRUCTURA WHILE
+
+while(<condicion>){ (mientras condicion hacer <codigo>)
+  <codigo>
+}
+
+ESTRUCTURA DO WHILE
+
+do{    ( hacer esto mientras se cumpla la condicion)
+  <codigo>
+}while(<condicion>)
+
+Ejemplo do while:
+
+"""
+let numero = 0;
+do{
+  numeros = prompt("ingresar numero");
+  console.log("el numero es "numeros);
+}while(parseint(numero))
+"""
+
+ESTRUCTURA SWITCH: Maneja de forma sencilla multiples condiciones sobre 
+                   la misma variable.
+
+"""
+switch(<variable>){
+  case 5:       (El case funciona como if variable  )
+    <codigo>
+    break; 
+  case 10:
+    <codigo>
+    break;
+  case 100:
+    <codigo>
+    break;
+  default:      (El default es lo que se ejecuta si no se cumple ingun case)
+    <codigo>
+}
+
