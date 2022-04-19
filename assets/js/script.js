@@ -1,14 +1,85 @@
 
-alert("Bienvenido al calculo de intereses");
-let monto = parseInt(prompt("Cual es el monto al cual quiere aplicarle un interes?"));
-while(isNaN(monto) || monto < 0){
-    alert("El valor ingresado no es un numero o bien es un valor negativo.")
-    monto = parseInt(prompt("Cual es el monto al cual quiere aplicarle un interes?"));
+//Primer entregable Clase 4//
+function saludo(nombre){
+    alert("Bienvenido " + nombre)
 }
-let interes = parseInt(prompt("Cual es el interes que quiere aplicar?     0 a 1000"));
-while(interes < 0 || interes > 1000 || isNaN(interes)){
-    alert("El valor ingresado no es un numero o bien no se encuentra dentro del rango admitido")
-    interes = parseInt(prompt("Cual es el interes que quiere aplicar?     0 a 1000"));
+function opciones(nombre){
+    alert("Estimado " + nombre + " elija entre las siguientes opciones:\n\nOpcion 1: Ingrese Dinero \nOpcion 2: Retire Dinero\nOpcion 3: Plazo Fijo\nOpcion 4: Saldo\nOpcion 5: Salir")
 }
-let total = monto + (monto * interes / 100)
-alert("Al monto de $" + monto + " aplicandole el interes del "+ interes + "% es igual a: $" + total);
+
+alert("Plataforma para Calculo de Intereses");
+let nombre = prompt("Ingrese su nombre por favor");
+saludo(nombre);
+opciones(nombre);
+let saldo = 0;
+let valor = parseInt(prompt("Cual es la opcion que elije?"));
+while(isNaN(valor) || valor < 1 || valor > 5){
+    alert("Usted no ingreso un numero o bien ingreso uno fuera del rango admitido");
+    valor = parseInt(prompt("Cual es la opcion que elije?"));
+}
+while(valor != 5){
+    switch(valor){
+        case 1:
+            let ingreso = parseInt(prompt("Cuanto dinero desea ingresar?"))
+            while(isNaN(ingreso) || ingreso < 5){
+                alert("El valor ingresado no es un numero o es menor a 5(CINCO)")
+                ingreso = parseInt(prompt("Cuanto dinero desea ingresar?"))
+            }
+            alert("Usted ingreso $" + ingreso + "a su cuenta")
+            saldo = saldo + ingreso
+            break;
+        
+        case 2:
+            let retiro = parseInt(prompt("Cuanto dinero desea retirar?"));
+            while(isNaN(retiro) || retiro < 0){
+                alert("El valor ingresado no es un numero o es menor a 0(CERO)")
+                retiro = parseInt(prompt("Cuanto dinero desea retirar?"));
+            }
+            if((saldo - retiro) < 0){
+                alert("Disculpe, el monto solicitado exede el saldo de su cuenta.\n\nIntente nuevamente por favor.")
+            }else{
+                saldo = saldo - retiro
+                alert("Usted retiro $" + retiro + " de su cuenta")
+            }
+            break;
+
+        case 3:
+            let monto = parseInt(prompt("Cual es el monto al cual quiere aplicarle un Plazo fijo"))
+            while(isNaN(monto) || monto < 0 || (saldo - monto) < 0){
+                if((saldo - monto) < 0){
+                    alert("El monto que quiere retirar es mayor a su saldo actual.")
+                }else{
+                    alert("Usted no ingreso un numero o bien ingreso uno menor a 0")
+                }
+                monto = parseInt(prompt("Cual es el monto al cual quiere aplicarle un Plazo fijo"))
+            }
+            let interes = parseInt(prompt("Elija una opcion: \n\n\nOpcion1: 15%\nOpcion2: 20%\nOpcion3: 30%"))
+            while(isNaN(interes) || interes < 1 || interes > 3){
+                alert("Usted no ingreso un numero o bien ingreso uno fuera del rango admitido")
+                interes = parseInt(prompt("Elija una opcion: \n\n\nOpcion1: 15%\nOpcion2: 20%\nOpcion3: 30%"))
+            }
+            let total = 0
+            switch(interes){
+                case 1: 
+                    total = monto + monto * 0.15
+                    alert("Si aplica un plazo fijo al monto de $" + monto + "aplicando un 15% recibira un total de $" + total );
+                    break;
+                case 2:
+                    total = monto + monto * 0.20
+                    alert("Si aplica un plazo fijo al monto de $" + monto + "aplicando un 20% recibira un total de $" + total );
+                    break;
+                case 3:
+                    total = monto + monto * 0.30
+                    alert("Si aplica un plazo fijo al monto de $" + monto + "aplicando un 30% recibira un total de $" + total );
+                    break;
+            }
+        case 4:
+            alert("Su saldo es de: $" + saldo);
+    }
+    opciones(nombre)
+    valor = parseInt(prompt("Cual es la opcion que elije?"));
+    while(isNaN(valor) || valor < 1 || valor > 5){
+        alert("Usted no ingreso un numero o bien ingreso uno fuera del rango admitido");
+        valor = parseInt(prompt("Cual es la opcion que elije?"));
+    }  
+}
