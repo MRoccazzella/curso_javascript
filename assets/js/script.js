@@ -1,5 +1,4 @@
-
-//Primer entregable Clase 4//
+//FUNCIONES
 function saludo(nombre){
     alert("Bienvenido " + nombre)
 }
@@ -21,15 +20,102 @@ function promedioValoraciones(valoracion){
     promedio = parseFloat(valores / valoracion.length);
     return promedio;
 }
-alert("Plataforma para Calculo de Intereses");
-let nombre = prompt("Ingrese su nombre por favor");
-while (isString(nombre) == false){
-    alert("Por favor ingrese un Nombre, ningun otro valor sera aceptado");
-    nombre = prompt("Ingrese su nombre por favor");
+function validacionCadena(valor){
+    if(!isNaN(valor) || valor == ""){
+        alert("valor invalido")
+        return true;
+    }else{
+        return false;
+    }
 }
-saludo(nombre);
-opciones(nombre);
-let saldo = 0;
+
+class Usuarios{
+    constructor(id, clave, nombre, apellido, saldo, dni, edad){
+        this.id = id;
+        this.clave = clave;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.saldo = saldo;
+        this.dni = dni;
+        this. edad = edad;
+    }
+}
+
+const usuario1 = new Usuarios(1, "Auto123", "Matias", "Roccazzella", 5000, 41835638, 23)
+const usuario2 = new Usuarios(2, "Fuego2004","Franco", "Roccazzella", 800, 46825647, 18)
+const usuario3 = new Usuarios(3, "OnePiece10","Dante", "De Luca", 2000, 42834891, 22)
+const usuario4 = new Usuarios(4, "1234Dado","Santiago", "Iturralde", 7000, 41873902, 22)
+listaUsuarios = [usuario1,usuario2,usuario3,usuario4]
+//Inicio de programa
+alert("Plataforma para Calculo de Intereses");
+let consultaUsuario = parseInt(prompt("Ingrese 1 si ya posee un usuario\n\nIngrese 2 si quiere crear un usuario."))
+while(isNaN(consultaUsuario) || consultaUsuario < 1 || consultaUsuario > 2){
+    alert("El valor que ingreso no es un numero o se encuentra fuera del rango admitido");
+    consultaUsuario = parseInt(prompt("Ingrese 1 si ya posee un usuario\n\nIngrese 2 si quiere crear un usuario."));
+}
+let estado = 0;
+let intentos = 0
+let usuarioFinal;
+while(estado === 0){
+    if(consultaUsuario === 1){
+        let consultaId = parseInt(prompt("Ingrese su numero de Id"));
+        while(isNaN(consultaId) || consultaId < 0 || consultaId > (listaUsuarios.length - 1)){
+            alert("Usted no ingreso un numero o ingreso un id inexixtente");
+            consultaId = parseInt(prompt("Ingrese su numero de Id"));
+        }
+        let consultaClave = prompt("Ingrese su clave.")
+        while(consultaClave == ""){
+            alert("Su clave no puede ser vacia")
+            consultaClave = prompt("Ingrese su clave.")
+        }
+        if(listaUsuarios[consultaId-1].clave === consultaClave){
+            usuarioFinal = listaUsuarios[consultaId - 1];
+            alert("bienvenido " + usuarioFinal.nombre)
+            estado = 1
+        }else{
+            alert("El id que ingreso no coincide con la clave.")
+        }
+        intentos ++;
+
+    }else{
+        let nuevoUserId = listaUsuarios.length + 1;
+        alert("su id es: " + nuevoUserId);
+        let nuevoUserClave = prompt("Ingrese su Clave:");
+        while(validacionCadena(nuevoUserClave) || nuevoUserClave.length < 3){
+            nuevoUserClave = prompt("Ingrese su Clave:");
+        }
+        let nuevoUserNombre = prompt("Ingrese su nombre:");
+        while(validacionCadena(nuevoUserNombre)){
+            nuevoUserNombre = prompt("Ingrese su nombre:");
+        }
+        let nuevoUserApellido = prompt("Ingrese su apellido:");
+        while(validacionCadena(nuevoUserApellido)){
+            nuevoUserApellido = prompt("Ingrese su apellido:");
+        }
+        let nuevoUserSaldo = 0;
+        let nuevoUserDni = parseInt(prompt("Ingrese su DNI:"));
+        while(isNaN(nuevoUserDni) || nuevoUserDni < 0){
+            alert("Valor invalido.");
+            nuevoUserDni = parseInt(prompt("Ingrese su DNI:"));
+        }
+        let nuevoUserEdad = parseInt(prompt("Ingrese su edad:"));
+        while(isNaN(nuevoUserEdad) || nuevoUserEdad < 0){
+            alert("Valor invalido.");
+            nuevoUserDni = parseInt(prompt("Ingrese su edad:"));
+        }
+        const usuario5 = new Usuarios(nuevoUserId,nuevoUserClave,nuevoUserNombre,nuevoUserApellido,nuevoUserSaldo,nuevoUserDni,nuevoUserEdad);
+        listaUsuarios.push(usuario5);
+        usuarioFinal = usuario5;
+        estado = 1;
+        alert(`Bienvenido ${usuario5.nombre} ${usuario5.apellido}`)
+    }
+    if(intentos == 4){
+        alert("Usted alcanzo el maximo de intentos para loguearse")
+        estado = 1
+    }
+}
+
+opciones(usuarioFinal.nombre);
 let valoracion = [];
 let valor = parseInt(prompt("Cual es la opcion que elije?"));
 while(isNaN(valor) || valor < 1 || valor > 5){
@@ -45,7 +131,7 @@ while(valor != 5){
                 ingreso = parseInt(prompt("Cuanto dinero desea ingresar?"));
             }
             alert("Usted ingreso $" + ingreso + " a su cuenta");
-            saldo = saldo + ingreso;
+            usuarioFinal.saldo += ingreso;
             break;
         
         case 2:
@@ -54,10 +140,10 @@ while(valor != 5){
                 alert("El valor ingresado no es un numero o es menor a 0(CERO)");
                 retiro = parseInt(prompt("Cuanto dinero desea retirar?"));
             }
-            if((saldo - retiro) < 0){
+            if((usuarioFinal.saldo - retiro) < 0){
                 alert("Disculpe, el monto solicitado exede el saldo de su cuenta.\n\nIntente nuevamente por favor.");
             }else{
-                saldo = saldo - retiro;
+                usuarioFinal.saldo -= retiro;
                 alert("Usted retiro $" + retiro + " de su cuenta");
             }
             break;
@@ -93,7 +179,7 @@ while(valor != 5){
                     break;
             }
         case 4:
-            alert("Su saldo es de: $" + saldo);
+            alert("Su saldo es de: $" + usuarioFinal.saldo);
     }
     let valorValoracion = parseInt(prompt("Por favor ingrese en una escala del 1 al 10 cual fue su satisfacicon al usar el Programa de Calculo de Intereses: "));
     while(isNaN(valorValoracion) || valorValoracion < 1 || valorValoracion > 10){
@@ -101,7 +187,7 @@ while(valor != 5){
         valorValoracion = parseInt(prompt("Por favor ingrese en una escala del 1 al 10 cual fue su satisfacicon al usar el Programa de Calculo de Intereses: "));
     }  
     valoracion.push(valorValoracion);
-    opciones(nombre);
+    opciones(usuarioFinal.nombre);
     valor = parseInt(prompt("Cual es la opcion que elije?"));
     while(isNaN(valor) || valor < 1 || valor > 5){
         alert("Usted no ingreso un numero o bien ingreso uno fuera del rango admitido");
@@ -110,4 +196,4 @@ while(valor != 5){
     
 }
 prom = promedioValoraciones(valoracion);
-alert("El usuario " + nombre + " valoro el programa con un valor promedio de: " + prom);
+alert("El usuario " + usuarioFinal.nombre + " valoro el programa con un valor promedio de: " + prom);
