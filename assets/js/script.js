@@ -107,14 +107,26 @@ while(estado === 0){
         listaUsuarios.push(usuario5);
         usuarioFinal = usuario5;
         estado = 1;
-        alert(`Bienvenido ${usuario5.nombre} ${usuario5.apellido}`)
+        
     }
     if(intentos == 4){
         alert("Usted alcanzo el maximo de intentos para loguearse")
         estado = 1
     }
 }
-
+let divUsuarios = document.getElementById("divUsuarios");
+listaUsuarios.forEach( usuarios => {
+    divUsuarios.innerHTML += `
+    <div id ="producto${usuarios.id}"> 
+    <br>
+    <p> Nombre: ${usuarios.nombre} </p> 
+    <p> Apellido: ${usuarios.apellido} </p> 
+    <p> Saldo: $${usuarios.saldo} </p>
+    <p> Edad: ${usuarios.edad}</p>
+    <br>
+    </div>
+    `
+});
 opciones(usuarioFinal.nombre);
 let valoracion = [];
 let valor = parseInt(prompt("Cual es la opcion que elije?"));
