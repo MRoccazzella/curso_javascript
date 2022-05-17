@@ -1,28 +1,56 @@
 
-let body = document.getElementById("body");
-let botonInicioSesion = document.getElementById("botonIniciaSesion")
-botonInicioSesion.onclick = () =>{
-    body.innerHTML = `
-    <div>
-        <h2 class="textoInicioSesion">Inicia Sesion</h2>
-    </div>
-    <div class="contenedorForm">
-        <form id="idFormulario">
-            <div class="mb-3">
-                <label for="name" class="form-label">Ingrese su ID</label>
-                <input type="name" class="form-control" id="exampleInputName">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Clave</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="submit btn btn-primary">Submit</button>
-        </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
-    `
+class Cryptos {
+    constructor(nombre, precio, disponibilidad){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.disponibilidad = disponibilidad;
+    }
 }
+
+let arrayCryptos = []
+
+const bitcoin = new Cryptos("Bitcoin", 30000, 10000);
+const ethereum = new Cryptos("Ethereum", 2000, 49000)
+const polkadot = new Cryptos("Polkadot", 11, 234722)
+const solana = new Cryptos("Solana", 89, 83000)
+
+arrayCryptos.push(bitcoin);
+arrayCryptos.push(ethereum);
+arrayCryptos.push(polkadot);
+arrayCryptos.push(solana);
+let formulario = document.getElementById("idFormulario");
+let botonInicioSesion = document.getElementById("botonIniciaSesion")
+let botonCierraSesion = document.getElementById("botonCierraSesion")
+let saludo = document.querySelector("#saludo")
+if(localStorage.getItem("nombre")){
+    formulario.classList.add("inactivo")
+    botonInicioSesion.classList.add("inactivo")
+    saludo.innerHTML = `Bienvenido ${localStorage.getItem("nombre")}`
+    botonCierraSesion.classList.remove("inactivo")
+}
+
+botonInicioSesion.addEventListener("click", () => {
+    formulario.classList.remove("inactivo")
+    botonInicioSesion.classList.add("inactivo")
+})
+botonCierraSesion.addEventListener("click", () => {
+    botonInicioSesion.classList.remove("inactivo")
+    botonCierraSesion.classList.add("inactivo")
+    saludo.classList.add("inactivo")
+    localStorage.clear();
+})
+let submit = document.getElementById("submitInicioSesion")
+submit.addEventListener("click", (event) => {
+    event.preventDefault()
+    let nombreActual = document.getElementById("nombreInicioSesion").value;
+    console.log(nombreActual)
+    localStorage.setItem("nombre", nombreActual)
+    formulario.classList.add("inactivo")
+    
+})
+saludo.innerHTML = `Bienvenido ${localStorage.getItem("nombre")}`
+console.log(localStorage.getItem("nombre"))
+
 //FUNCIONES
 /*function saludo(nombre){
     alert("Bienvenido " + nombre)

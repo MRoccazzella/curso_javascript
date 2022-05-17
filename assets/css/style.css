@@ -2,11 +2,19 @@
     margin: 0;
     padding: 0;
 }
+.inactivo{
+    display: none;
+}
 body{
     background-image: url(../images/fondo.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+}
+#saludo{
+    color: white;
+    margin-left: 85vw;
+    font-size: 1.5em;
 }
 header{
     width: 100vw;
@@ -28,6 +36,15 @@ header .titulo{
     margin-left: 85vw;
     color: white;
 
+}
+#botonCierraSesion{
+    padding: 5px;
+    width: max-content;
+    height: max-content;
+    border-radius: 15px;
+    background-color: rgb(62, 62, 60);
+    margin-left: 85vw;
+    color: white;
 }
 main{
     width: 100vw;

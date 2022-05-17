@@ -13,13 +13,30 @@
     <header>
         <h1 class="titulo">Crypto Bank</h1>         
         <button id="botonIniciaSesion">Inicia Sesion</button>
+        <h2 id="saludo"></h2>
+        <button id="botonCierraSesion" class="inactivo">Cerrar Sesion</button>
     </header>
     <main>
         <div id="divUsuarios"> 
         </div>
-        <div class="contenedorForm">
-            
+        <div class="contenedorForm" id="contenedorForm">
+            <form id="idFormulario" class="inactivo">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombreInicioSesion">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Clave</label>
+                    <input type="password" class="form-control" id="passInicioSesion">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="correoInicioSesion">
+                </div>
+                <button type="submit" class="submit btn btn-primary" id="submitInicioSesion">Submit</button>
+            </form>
         </div>
+       
     </main>
     <footer>
         <p>Derechos reservados - Matias Roccazzella</p>
