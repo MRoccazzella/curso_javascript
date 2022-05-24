@@ -18,6 +18,7 @@ arrayCryptos.push(bitcoin);
 arrayCryptos.push(ethereum);
 arrayCryptos.push(polkadot);
 arrayCryptos.push(solana);
+
 let formulario = document.getElementById("idFormulario");
 let botonInicioSesion = document.getElementById("botonIniciaSesion")
 let botonCierraSesion = document.getElementById("botonCierraSesion")
@@ -25,7 +26,6 @@ let saludo = document.querySelector("#saludo")
 if(localStorage.getItem("nombre")){
     formulario.classList.add("inactivo")
     botonInicioSesion.classList.add("inactivo")
-    saludo.innerHTML = `Bienvenido ${localStorage.getItem("nombre")}`
     botonCierraSesion.classList.remove("inactivo")
 }
 
@@ -46,10 +46,12 @@ submit.addEventListener("click", (event) => {
     console.log(nombreActual)
     localStorage.setItem("nombre", nombreActual)
     formulario.classList.add("inactivo")
-    
+    Swal.fire({
+        icon: 'success',
+        title: `Bienvenido ${nombreActual}`,
+      })
 })
 saludo.innerHTML = `Bienvenido ${localStorage.getItem("nombre")}`
-console.log(localStorage.getItem("nombre"))
 
 //FUNCIONES
 /*function saludo(nombre){
