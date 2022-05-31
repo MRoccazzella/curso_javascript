@@ -27,6 +27,15 @@ header .titulo{
     position: relative;
     
 }
+#cryptos{
+    display: flex;
+    justify-content: center;
+}
+.cardsCryptos{
+    color: white;
+    width: 400px;
+    display:inline-block;
+}
 #botonIniciaSesion{
     padding: 5px;
     width: max-content;

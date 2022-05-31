@@ -1,5 +1,5 @@
 
-class Cryptos {
+/*class Cryptos {
     constructor(nombre, precio, disponibilidad){
         this.nombre = nombre;
         this.precio = precio;
@@ -51,7 +51,29 @@ submit.addEventListener("click", (event) => {
         title: `Bienvenido ${nombreActual}`,
       })
 })
-saludo.innerHTML = `Bienvenido ${localStorage.getItem("nombre")}`
+
+saludo.innerHTML = `Bienvenido ${localStorage.getItem("nombre")}`*/
+
+const listaCriptos = ["btc", "eth", "dai", "usdt", "usdc", "busd", "usdp", "bnb", "sol", "luna", "dot", "matic", "avax", "ftm", "link", "uni", "bch", "ltc", "xrp", "axs", "slp", "mana", "bat", "trx", "doge"]
+divCrypto = document.querySelector("#crypto")
+
+for(let i = 0; i < listaCriptos.length; i++){
+    
+    fetch(`https://criptoya.com/api/ftx/${listaCriptos[i]}/ars/0.1`)
+    .then(response => response.json())
+    .then(data => {
+        let valor = {...data}
+        console.log(valor)
+        divCrypto.innerHTML += `
+        <div class="cardsCryptos" id="${listaCriptos[i]}">
+            <h4> ${listaCriptos[i].toUpperCase()} </h4>
+            <p> price: $${valor.ask} ARS </p>
+        </div>
+        `
+    })   
+    
+}
+
 
 //FUNCIONES
 /*function saludo(nombre){
