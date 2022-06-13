@@ -1,85 +1,89 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    box-sizing: border-box;
+    
 }
 .inactivo{
     display: none;
 }
-body{
-    background-image: url(../images/fondo.jpg);
+#body{
+    background-image: linear-gradient(180deg, black, rgb(49, 49, 49));;
     background-repeat: no-repeat;
-    background-position: center top;
     background-size: cover;
+    background-position: 0%;
 }
-#saludo{
-    color: white;
-    margin-left: 85vw;
-    font-size: 1.5em;
-}
+
 header{
     width: 100vw;
     
 }
-
-header .titulo{
+.divBuscador{
+    margin-top: 80px;
+}
+.buscadorTexto{
+    color: white;
+    margin-right: 10px;
+}
+.titulo{
     text-align: center;
     color: whitesmoke;
     position: relative;
+    margin-top: 20px;
+    font-size: 3em;
     
-}
-#cryptos{
-    display: flex;
-    justify-content: center;
-}
-.cardsCryptos{
-    color: white;
-    width: 400px;
-    display:inline-block;
-}
-#botonIniciaSesion{
-    padding: 5px;
-    width: max-content;
-    height: max-content;
-    border-radius: 15px;
-    background-color: rgb(62, 62, 60);
-    margin-left: 85vw;
-    color: white;
-
-}
-#botonCierraSesion{
-    padding: 5px;
-    width: max-content;
-    height: max-content;
-    border-radius: 15px;
-    background-color: rgb(62, 62, 60);
-    margin-left: 85vw;
-    color: white;
 }
 main{
     width: 100vw;
     height: auto;
 }
-.contenedorForm{
-    display: flex;
-    width: 100vw;
+.imagenCrypto{
+    width: 180px;
+    height: 120px;
+    margin: 5px;
 }
-#idFormulario{
+#crypto{
+    width: 75vw;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left: 12.5vw;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+.cardsCryptos{
+    background-color: rgb(81, 81, 81);
+    color: white;
+    width: 300px;
     height: 350px;
-    width: 350px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    border: solid 1px white;
+    text-align: center;
+    margin: 20px;
+    
+}
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+.botonCompra{
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px;
+}
+.botones p{
+    align-items: center;
+    margin-right: 7px;
 }
 footer{
+    bottom: 0;
     width: 100vw;
     height: auto;
-}
-.textoInicioSesion{
-    text-align: center;
-    color: white;
-    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;   
+    color: bisque;
+    margin-top: 200px;
 }

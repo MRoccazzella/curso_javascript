@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo de intereses</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Bank</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,31 +15,163 @@
 <body id="body">
     <header>
         <h1 class="titulo">Crypto Bank</h1>         
-        <button id="botonIniciaSesion">Inicia Sesion</button>
-        <h2 id="saludo" class="inactivo"></h2>
-        <button id="botonCierraSesion" class="inactivo">Cerrar Sesion</button>
+        <div class="d-flex justify-content-center divBuscador">
+            <span class="buscadorTexto">Buscador Crypto</span>
+            <input id="buscador" type="text">
+        </div>
+      
+        
     </header>
     <main>
-        <div id="divUsuarios"> 
-        </div>
-        <div class="contenedorForm" id="contenedorForm">
-            <form id="idFormulario" class="inactivo">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="nombreInicioSesion">
+        
+       <div id="crypto">
+
+            <div class="cardsCryptos" id="btc1">
+               <div class="cardsCryptos1" id="btc">
+                   <img class="imagenCrypto" src="assets/images/bitcoin.png" alt="">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Clave</label>
-                    <input type="password" class="form-control" id="passInicioSesion">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="correoInicioSesion">
-                </div>
-                <button type="submit" class="submit btn btn-primary" id="submitInicioSesion">Submit</button>
-            </form>
-        </div>
-       <div id="crypto"></div>
+               <button class="botonCompra btn btn-secondary" id="botonbtc">Comprar</button>
+            </div>
+            <div class="cardsCryptos" id="eth1" >
+                <div class="cardsCryptos1" id="eth">
+                    <img class="imagenCrypto" src="assets/images/ethereum.jpg" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botoneth">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="dai1">
+                <div class="cardsCryptos1" id="dai">
+                    <img class="imagenCrypto" src="assets/images/dai.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botondai">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="usdt1">
+                <div class="cardsCryptos1" id="usdt">
+                    <img class="imagenCrypto" src="assets/images/usdt.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonusdt">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="usdc1">
+                <div class="cardsCryptos1" id="usdc">
+                    <img class="imagenCrypto" src="assets/images/usdc.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonusdc">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="busd1">
+                <div class="cardsCryptos1" id="busd">
+                    <img class="imagenCrypto" src="assets/images/busd.svg" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonbusd">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="usdp1">
+                <div class="cardsCryptos1" id="usdp">
+                    <img class="imagenCrypto" src="assets/images/usdp.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonusdp">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="bnb1">
+                <div class="cardsCryptos1" id="bnb">
+                    <img class="imagenCrypto" src="assets/images/bnb.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonbnb">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="sol1">
+                <div class="cardsCryptos1" id="sol">
+                    <img class="imagenCrypto" src="assets/images/solana.jpg" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonsol">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="dot1">
+                <div class="cardsCryptos1" id="dot">
+                    <img class="imagenCrypto" src="assets/images/Polkadot.jpg" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botondot">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="matic1">
+                <div class="cardsCryptos1" id="matic">
+                    <img class="imagenCrypto" src="assets/images/matic.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonmatic">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="avax1">
+                <div class="cardsCryptos1" id="avax">
+                    <img class="imagenCrypto" src="assets/images/avax.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonavax">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="ftm1">
+                <div class="cardsCryptos1" id="ftm">
+                    <img class="imagenCrypto" src="assets/images/ftm.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonftm">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="link1">
+                <div class="cardsCryptos1" id="link">
+                    <img class="imagenCrypto" src="assets/images/link.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonlink">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="uni1" >
+                <div class="cardsCryptos1" id="uni">
+                    <img class="imagenCrypto" src="assets/images/uni.jpg" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonuni">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="bch1">
+                <div class="cardsCryptos1" id="bch">
+                    <img class="imagenCrypto" src="assets/images/bch.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonbch">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="ltc1">
+                <div class="cardsCryptos1" id="ltc">
+                    <img class="imagenCrypto" src="assets/images/ltc.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonltc">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="xrp1">
+                <div class="cardsCryptos1" id="xrp">
+                    <img class="imagenCrypto" src="assets/images/xrp.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonxrp">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="axs1">
+                <div class="cardsCryptos1" id="axs">
+                    <img class="imagenCrypto" src="assets/images/axs.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonaxs">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="slp1" >
+                <div class="cardsCryptos1" id="slp">
+                    <img class="imagenCrypto" src="assets/images/slp.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonslp">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="mana1">
+                <div class="cardsCryptos1" id="mana">
+                    <img class="imagenCrypto" src="assets/images/mana.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonmana">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="bat1">
+                <div class="cardsCryptos1" id="bat">
+                    <img class="imagenCrypto" src="assets/images/bat.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botonbat">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="trx1">
+                <div class="cardsCryptos1" id="trx">
+                    <img class="imagenCrypto" src="assets/images/trx.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botontrx">Comprar</button>
+             </div>
+             <div class="cardsCryptos" id="doge1">
+                <div class="cardsCryptos1" id="doge">
+                    <img class="imagenCrypto" src="assets/images/doge.png" alt="">
+                 </div>
+                <button class="botonCompra btn btn-secondary" id="botondoge">Comprar</button>
+             </div>
+           
+       </div>
     </main>
     <footer>
         <p>Derechos reservados - Matias Roccazzella</p>
